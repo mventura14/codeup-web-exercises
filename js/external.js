@@ -6,7 +6,7 @@ alert("Welcome to my Website!");
 let favoriteColor = prompt("What is your favorite color?");
 alert(`Cool, ${favoriteColor} is my favorite too!`);
 
-
+alert("It seems like you want to rent some movies. Let me help you.")
 let mermaidDays = prompt("How many days are you renting The little mermaid?");
 let brotherBearDays = prompt("How many days are you renting Brother Bear?");
 let herculesDays = prompt("How many days are you renting Hercules?");
