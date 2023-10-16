@@ -89,7 +89,7 @@ function calculateTip(tipPercent,billTotal){
 function tip(){
     let billTotal = prompt("What is your total bill?");
     let tipPercent = prompt('What percentage do you want to tip?');
-    alert(`Total amount of tip is $${calculateTip(tipPercent,billTotal).toFixed(2)}.`);
+    alert(`Total amount of tip due is $${calculateTip(tipPercent,billTotal).toFixed(2)}.`);
 }
 
 /**
@@ -114,5 +114,5 @@ function applyDiscount(originalPrice,discountPercentage){
 function discountTotal(){
   let originalPrice =  prompt(`What is the item original price?`);
   let discountPercentage  = prompt(`What is the discount percentage?`);
-  alert(`Total amount of tip is $${applyDiscount(originalPrice,discountPercentage).toFixed(2)}.`);
+  alert(`Total cost after discount is $${applyDiscount(originalPrice,discountPercentage).toFixed(2)}.`);
 }
