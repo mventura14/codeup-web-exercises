@@ -73,9 +73,7 @@ function isTwo(x){
  */
 
 function calculateTip(tipPercent,billTotal){
-    let tip = tipPercent/100
-    return billTotal * tip
-
+    return billTotal * tipPercent
 }
 
 
