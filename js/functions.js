@@ -9,8 +9,9 @@ console.log("Linked")
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return helloMessage = `Hello, ${name}!`
+    return `Hello, ${name}!`
 }
+
 
 
 /**
@@ -21,7 +22,7 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
  */
 
-let helloMessage;
+let helloMessage = sayHello("Michael")
 
 
 /**
@@ -32,7 +33,7 @@ let helloMessage;
  */
 
 let myName = "John"
-
+console.log(sayHello(myName))
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
