@@ -110,6 +110,7 @@ function applyDiscount(originalPrice,discountPercentage){
     return originalPrice - (originalPrice * discountPercentage)
 }
 
+
 function discountTotal(){
   let originalPrice =  prompt(`What is the item original price?`);
   let discountPercentage  = prompt(`What is the discount percentage?`);
