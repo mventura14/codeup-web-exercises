@@ -23,7 +23,7 @@ console.log("JS Linked")
  * console.logging the function's return value
  */
 
-/*
+
 function analyzeColor(color){
     if (color.toLowerCase() === "red"){
         return `Strawberries are ${color}.`
@@ -36,11 +36,8 @@ function analyzeColor(color){
 }
 
 
-console.log(analyzeColor("red"));
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("orange"));
-console.log(analyzeColor("gray"));
-*/
+
+
 
 
 
@@ -58,7 +55,7 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-console.log(analyzeColor(randomColor))
+//console.log(analyzeColor(randomColor))
 
 
 
@@ -69,7 +66,7 @@ console.log(analyzeColor(randomColor))
 
 
 function analyzeColor(color) {
-    switch (color.toLowerCase()) {
+    switch (randomColor.toLowerCase()) {
         case "red":
             return `Strawberries are ${color}.`;
             break;
