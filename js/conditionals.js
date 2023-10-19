@@ -24,22 +24,16 @@ console.log("JS Linked")
  */
 
 
-function analyzeColor(color){
-    if (color.toLowerCase() === "red"){
+function analyzeColor(color) {
+    if (color.toLowerCase() === "red") {
         return `Strawberries are ${color}.`
-    } else if (color.toLowerCase() === "blue"){
+    } else if (color.toLowerCase() === "blue") {
         return `There is no natural ${color} in nature.`
-    } else if (color.toLowerCase() === "orange"){
+    } else if (color.toLowerCase() === "orange") {
         return `The sun seems to be ${color}.`
     } else
         return `It seems like ${color} is not in the database.`
 }
-
-
-
-
-
-
 
 
 // Don't change the next two lines!
@@ -58,14 +52,13 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 //console.log(analyzeColor(randomColor))
 
 
-
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
 
-function analyzeColor(color) {
+function analyzColor(color) {
     switch (randomColor.toLowerCase()) {
         case "red":
             return `Strawberries are ${color}.`;
@@ -81,6 +74,7 @@ function analyzeColor(color) {
     }
 }
 
+console.log(analyzColor(randomColor))
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -90,8 +84,6 @@ function analyzeColor(color) {
 
 let color = prompt('What is your favorite color?').toLowerCase()
 alert(analyzeColor(color))
-
-
 
 
 /* ########################################################################## */
@@ -116,23 +108,23 @@ alert(analyzeColor(color))
  * return value.
  */
 
-function calculateTotal(num,total){
-    switch (num){
+function calculateTotal(num, total) {
+    switch (num) {
         case 1:
-            return `Lucky number 1, Your total after 10% discount is $${(total - total *.1).toFixed(2)}.Before it was $${total}.`;
+            return `Lucky number 1, Your total after 10% discount is $${(total - total * .1).toFixed(2)}.Before it was $${total}.`;
             break;
         case 2:
-            return `Lucky number 2, Your total after 25% discount is $${(total - total *.1).toFixed(2)}.Before it was $${total}.`;
+            return `Lucky number 2, Your total after 25% discount is $${(total - total * .25).toFixed(2)}.Before it was $${total}.`;
             break;
         case 3:
-            return `Lucky number 3, Your total after 35% discount is $${(total - total * .1).toFixed(2)}.Before it was $${total}.`;
+            return `Lucky number 3, Your total after 35% discount is $${(total - total * .35).toFixed(2)}.Before it was $${total}.`;
             break;
         case 4:
-            return `Lucky number 4, Your total after 50% discount is $${(total - total *.1).toFixed(2)}.Before it was $${total}.`;
+            return `Lucky number 4, Your total after 50% discount is $${(total - total * .5).toFixed(2)}.Before it was $${total}.`;
             break;
         case 5:
-            return `Lucky number 5, Your total after 100% discount is $${(total - total *.1).toFixed(2)}.Before it was $${total}.`;
-            break ;
+            return `Lucky number 5, Your total after 100% discount is $${(total - total * 1).toFixed(2)}.Before it was $${total}.`;
+            break;
 
         default:
             return `Sorry, no discount. Your total is $${total.toFixed(2)}`;
@@ -162,7 +154,7 @@ console.log(calculateTotal(5,100));
 const luckyNumber = Math.floor(Math.random() * 6);
 
 let total = parseFloat(prompt('What is your to bill?'))
-alert(calculateTotal(luckyNumber,total))
+alert(calculateTotal(luckyNumber, total))
 
 /**
  * TODO:
@@ -183,17 +175,17 @@ alert(calculateTotal(luckyNumber,total))
  * HINT: The way we prompt for a value could be improved
  */
 
-function isEven(num){
-        switch (num % 2 === 0) {
-            case true:
-                return `${num} is even`;
-                break;
-            default:
-                return `${num} is odd`
-        }
+function isEven(num) {
+    switch (num % 2 === 0) {
+        case true:
+            return `${num} is even`;
+            break;
+        default:
+            return `${num} is odd`
+    }
 }
 
-function isPos(num){
+function isPos(num) {
     switch (num >= 0) {
         case true:
             return `${num} is a positive number.`;
@@ -204,15 +196,15 @@ function isPos(num){
 }
 
 
-
 if (confirm("Would you like to enter a number?")) {
     let userNum = parseFloat(prompt("Please enter your number."));
     if (!isNaN(userNum)) {
         alert(isEven(userNum));
         alert(`${userNum} + 100 = ${userNum + 100}`);
         alert(isPos(userNum));
+    } else {
+        alert("That's not a number...");
     }
-    else {alert("That's not a number...");}
 }
 
 
