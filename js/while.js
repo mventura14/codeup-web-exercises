@@ -25,7 +25,6 @@ function dW() {
         }
         if (totalCones === 0) {
             console.log(`Yay! I sold them all!`)
-            break;
         }
     } while (totalCones > 0);
 }
