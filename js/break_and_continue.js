@@ -5,6 +5,7 @@ function breakContinue() {
     let num = parseInt(prompt('Please choose an odd number between 1 - 50'))
 
     while (0 < 1) {
+
         if ((num >= 1) && (num <= 50) && num % 2 !== 0) {
             console.log(`Number to skip is: ${num}`)
             break;
@@ -12,7 +13,7 @@ function breakContinue() {
         num = parseInt(prompt('Please choose an odd number between 1 - 50'))
     }
 
-    for (let i = 0; i < +50; i++) {
+    for (let i = 0; i < 50; i++) {
         if (i === num) {
             console.log(`Yikes! Skipping number: ${i}`)
             continue;

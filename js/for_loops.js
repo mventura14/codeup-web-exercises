@@ -17,7 +17,7 @@ function showMultiplicationTable(x) {
 /*
 for (let x = 0; x <= 10; x++) {
 
-    let randomNumber = Math.floor(Math.random() * 180 + 20)
+    let randomNumber = Math.floor((Math.random() * 181) + 20)
 
     if (randomNumber % 2 === 0) {
         console.log(`${randomNumber} is even.`)
