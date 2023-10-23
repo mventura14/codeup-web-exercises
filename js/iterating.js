@@ -43,7 +43,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    name.forEach(name => console.log(name))
+    name.forEach(names => console.log(names))
 
     /**
      * TODO:
