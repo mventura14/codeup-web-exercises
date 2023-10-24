@@ -13,7 +13,8 @@
      */
 
     const person = {
-        firstName: 'Marco', lastName: 'Sanchez',
+        firstName: 'Marco',
+        lastName: 'Sanchez',
 
     };
 
@@ -50,12 +51,14 @@
      * and console.log the relevant messages for each person
      */
 
-    let shoppers = [{name: 'Cameron', amount: 180}, {name: 'Ryan', amount: 250}, {name: 'George', amount: 320}];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}];
 
 
     shoppers.forEach(shopper => {
-        let message;
-        if (shopper.amount >= 200) {
+        if (shopper.amount > 200) {
             shopper.discountTotal = shopper.amount - (shopper.amount * .12);
             shopper.dicountMessage = `${shopper.name}, your total is $${shopper.amount.toFixed(2)}. You are eligible for a discount of 12%. New total is $${shopper.discountTotal.toFixed(2)}`
         } else {
@@ -79,38 +82,50 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+
+
     let books = [{
-        title: "Sapiens", author: {
-            fistName: "Yuval", lastName: "Harari"
+        title: "Sapiens",
+        author: {
+            firstName: "Yuval",
+            lastName: "Harari",
         }
 
     }, {
-        title: "Thinking_Fast_and_Slow", author: {
-            fistName: "Daniel", lastName: "Kahneman"
+        title: "Thinking_Fast_and_Slow",
+        author: {
+            firstName: "Daniel",
+            lastName: "Kahneman"
         }
 
     }, {
-        title: "The_Fault_in_Our_Stars", author: {
-            fistName: "John", lastName: "Green"
+        title: "The_Fault_in_Our_Stars",
+        author: {
+            firstName: "John",
+            lastName: "Green",
         }
 
     }, {
-        title: "The_Housemaid", author: {
-            fistName: "Freida", lastName: "McFadden"
+        title: "The_Housemaid",
+        author: {
+            firstName: "Freida",
+            lastName: "McFadden",
         }
 
     }, {
-        title: "Me_Talk_Pretty_One_Day", author: {
-            fistName: "David", lastName: "Sedaris"
+        title: "Me_Talk_Pretty_One_Day",
+        author: {
+            firstName: "David",
+            lastName: "Sedaris",
         }
 
     },]
-
-    /*    books.forEach(book => console.log(`${book.title}`));
-        books.forEach(book => console.log(`${book.author.fistName}`));
-        console.log(/nl);
-        books.forEach(book => console.log(`${book.author.lastName}`));
-        console.log(books);*/
+/*
+    books.forEach(book => console.log(`${book.title}`));
+    books.forEach(book => console.log(`${book.author.firstName}`));
+    books.forEach(book => console.log(`${book.author.lastName}`));
+    console.log(books);
+*/
 
     /**
      * TODO:
@@ -138,13 +153,12 @@
      */
 
 
-      for (let i = 0; i < books.length;
-           i++) {
-          console.log(`Book # ${i + 1}`);
-          console.log(`Title: ${books[i].title.replace(/_/g," ")}`);
-          console.log(`Author: ${books[i].author.fistName} ${books[i].author.lastName}`)
-          console.log(`_ _ _`)
-      }
+    for (let i = 0; i < books.length; i++) {
+        console.log(`Book # ${i + 1}`);
+        console.log(`Title: ${books[i].title.replace(/_/g, " ")}`);
+        console.log(`Author: ${books[i].author.firstName} ${books[i].author.lastName}`)
+        console.log(`_ _ _`)
+    }
 
     /**
      * Bonus:
@@ -172,18 +186,17 @@
         }
     }
 
-    let showBookInfo = (Library) => {
-        for (let i = 0; i < Library.length; i++) {
+    let showBookInfo = (library) => {
+        for (let i = 0; i < library.length; i++) {
             console.log(`Book # ${i + 1}`);
-            console.log(`Title: ${Library[i].title.replace(/_/g, " ")}`);
-            console.log(`Author: ${Library[i].author.firstName} ${Library[i].author.lastName}`)
+            console.log(`Title: ${library[i].title.replace(/_/g, " ")}`);
+            console.log(`Author: ${library[i].author.firstName} ${library[i].author.lastName}`)
             console.log(`_ _ _`)
         }
     }
 
     createBook()
     bookList.forEach(book => console.log(book))
-
     showBookInfo(bookList)
 
 
