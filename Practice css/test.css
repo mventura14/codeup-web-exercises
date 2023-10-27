@@ -27,7 +27,7 @@ body {
 
 .color {
     padding: 1em;
-    background: rgb(6, 72, 72);
+    background: rgb(8, 93, 93);
     height: min-content;
     border-radius: 1em;
     color: azure;
@@ -59,14 +59,18 @@ form {
     }
 
     & label {
+
+        align-self: center;
         padding-left: 1em;
-        display: block;
         margin: .5em 0;
         width: 100%;
     }
 
     & input {
-        display: block;
+
+        align-self: center;
+        justify-self: center;
+
         margin: 0 .5em;
         width: 100%;
 
@@ -98,7 +102,7 @@ form {
         padding: 1em;
         border-radius: 1.8em;
         border: none;
-        background-color: #095d5d;
+        background-color: #053b3b;
     }
     & button:hover {
     background-color: rgba(21, 227, 227, 0.73);
