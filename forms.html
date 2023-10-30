@@ -11,15 +11,15 @@
         <h2>Register With Us</h2>
         <form method="POST" action="https://request-inspector.glitch.me/">
             <div class="row">
-                <label for="email">E-mail</label>
-                <input type="text" name="eMail" id="email" placeholder="E-Mail">
+                <label for="email">User E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-Mail">
             </div>
             <div class="row">
-                <label for="password">Password</label>
+                <label for="password">User Password</label>
                 <input type="password" name="password" id="password" placeholder="Password">
             </div>
             <div class="col">
-                <label for="bio">Tell us about yourself.</label>
+                <label for="bio">User Bio.</label>
                 <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Tell us about yourself."></textarea>
             </div>
 
@@ -27,13 +27,13 @@
                 <p>Where did you hear about us?</p>
             </div>
             <div class="row">
-                <input type="radio" name="from" id="from" value="billboard">
+                <input type="checkbox" name="from" id="from" value="billboard">
                 <label for="from">Billboard</label>
-                <input type="radio" name="from" id="from1" value="radioAdvertisement">
+                <input type="checkbox" name="from" id="from1" value="radioAdvertisement">
                 <label for="from1">Radio Advertisement</label>
-                <input type="radio" name="from" id="from2" value="internetAdvertisement">
+                <input type="checkbox" name="from" id="from2" value="internetAdvertisement">
                 <label for="from2">Internet Advertisement</label>
-                <input type="radio" name="from" id="from3" value="other">
+                <input type="checkbox" name="from" id="from3" value="other">
                 <label for="from3">Other</label>
             </div>
             <div class="col">
@@ -42,7 +42,7 @@
                 </label>
                 <select name="browser" id="browser">
                     <option value="chrome">Chrome</option>
-                    <option value="fireFox">Fire Fox</option>
+                    <option value="firefox">Firefox</option>
                     <option value="edge">Edge</option>
                 </select>
 
