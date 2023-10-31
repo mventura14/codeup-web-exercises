@@ -17,11 +17,19 @@ img {
 }
 
 body {
+
     background-color: #095454;
     font-family: 'Cormorant Garamond', serif;
 }
 
 .index-sec1 {
+    background-image: url("../img/Circuit-PNG-File.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +52,7 @@ body {
 }
 
 .index-sec2 {
+    background-color: #095454;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -55,7 +64,8 @@ body {
         justify-content: space-evenly;
         list-style: none;
         justify-items: baseline;
-        background: linear-gradient(0deg, #095454, rgba(4, 227, 2, 0.36),#095454 );;
+        background: linear-gradient(0deg, rgba(9, 84, 84, 0), rgba(4, 227, 2, 0.36), rgba(9, 84, 84, 0.04));
+        backdrop-filter: none;
         > li {
             background-color: #073b3b;
             padding: 1em;
@@ -71,7 +81,9 @@ body {
 
             .info {
                 display: block;
-                backdrop-filter: blur(3px);
+                backdrop-filter: blur(4px);
+                background-color: rgba(2, 245, 79, 0.08);
+                border-radius: 20px;
             }
 
         }
@@ -144,28 +156,33 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 1em;
-}
 
-table{
-    margin-top: 1em;
-    border: 2px solid black;
-    border-collapse: collapse;
-
-    & tr:nth-child(1){
-        text-align: center;
-        font-size: 1.7rem;
-
+    & h2{
+        font-size: 2.3rem;
     }
 
-    & td{
+    & table{
+        margin-top: 1em;
         border: 2px solid black;
-        padding: 1em;
-    }
+        border-collapse: collapse;
 
-    & td:nth-child(2){
-        text-align: center;
-    }
+        & tr:nth-child(1){
+            text-align: center;
+            font-size: 1.7rem;
 
+        }
+
+        & td{
+            border: 2px solid black;
+            padding: 1em;
+        }
+
+        & td:nth-child(2){
+            text-align: center;
+        }
+
+
+    }
 
 }
 .ft{
@@ -174,6 +191,7 @@ table{
     flex-direction: row;
     justify-content: center;
 }
+
 
 
 
