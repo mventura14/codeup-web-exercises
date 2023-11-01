@@ -45,6 +45,7 @@ padding: 1em;
 
 .form-label {
     /* The text of a label must be bold */
+    font-weight: bold;
 }
 
 .btn-block {
@@ -76,6 +77,8 @@ padding: 1em;
     box-sizing: border-box;
     padding: 4px 0;
     margin: .5em 0;
+
+
 
     /*gave up on this one, border-sizing was easier*/
 }
