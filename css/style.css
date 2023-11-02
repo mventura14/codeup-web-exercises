@@ -78,7 +78,7 @@ body {
         }
 
         > li:hover {
-            background-color: #083b6b;
+            background-color: #01261b;
 
             .info {
                 display: block;
@@ -97,6 +97,7 @@ body {
         position: absolute;
         width: 100%;
         float: right;
+
     }
 
     .d {
