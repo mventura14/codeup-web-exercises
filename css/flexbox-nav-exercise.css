@@ -5,9 +5,13 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #095454;
 }
 
+.navbar{
+    display: flex;
+}
 
 nav {
     background-color: #424040;
@@ -18,6 +22,7 @@ nav {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        width: 33%;
     }
 
     & li {
@@ -25,12 +30,21 @@ nav {
     }
 
     .logo {
+        text-align: center;
+        width: 33.33%;
         margin: 0 auto;
         font-size: 2em;
+        font-family: 'Montserrat', sans-serif;
 
         & a {
             margin: .2em;
+            padding: 0;
         }
+
+        & a:hover{
+            background-color: rgba(15, 183, 132, 0);
+        }
+
     }
 
     & a {
@@ -45,6 +59,12 @@ nav {
 
     & a:hover {
         color: blue;
+        background-color: #0d7c7c;
     }
+
+    .nav-links-2{
+        justify-content: flex-end;
+    }
+
 
 }
