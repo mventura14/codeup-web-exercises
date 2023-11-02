@@ -1,0 +1,50 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+
+
+nav {
+    background-color: #424040;
+    align-items: center;
+
+    & ul {
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    & li {
+
+    }
+
+    .logo {
+        margin: 0 auto;
+        font-size: 2em;
+
+        & a {
+            margin: .2em;
+        }
+    }
+
+    & a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1em;
+        height: 100%;
+        text-wrap: none;
+        min-width: max-content;
+    }
+
+    & a:hover {
+        color: blue;
+    }
+
+}
