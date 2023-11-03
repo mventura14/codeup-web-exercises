@@ -1,0 +1,135 @@
+/* All your custom styles for this site go here */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrapper {
+    /*background-color: #D9D9D9;*/
+
+    /*background-image: url("../img/absolute-positioning-mockup.png");*/
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.bg-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .bg-rel {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        & img {
+            position: fixed;
+        }
+
+        .bg-wave {
+            bottom: 0;
+            width: 100%;
+        }
+
+        .bg-wavy-1 {
+            max-width: 10dvw;
+            top: 19.5dvh;
+            left: 1dvw;
+            fill: rgba(78, 84, 84, 0.79);
+
+        }
+
+        .bg-wavy-2 {
+            width: 10dvw;
+            right: 1dvw;
+            top: 42dvh;
+
+        }
+
+        .bg-dots-1{
+            max-width: 4.2dvw;
+            top: 48dvh;
+            left: 7.3dvw;
+        }
+
+        .bg-dots-2{
+            max-width: 7.4dvw;
+            top: 2dvh;
+            right: 5.6dvw;
+        }
+
+    }
+}
+
+
+.container.login {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 45px 25px;
+    width: calc(100% - 40px);
+    max-width: 530px;
+    box-shadow: 0px 0px 104px -40px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.container.login h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+input {
+    min-height: 55px;
+    border: 1px solid #DDDFE1;
+    padding: 0 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #ABAFB3;
+}
+
+label.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label.input-group span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+label.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label.checkbox span {
+    font-size: 13px;
+    color: #ABAFB3;
+}
+
+a.link {
+    font-size: 13px;
+}
+
+button.btn {
+    min-height: 55px;
+    border: none;
+    border-radius: 99px;
+    background-color: #AA04F9;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.btn.btn-login {
+    align-self: center;
+    flex: 0 1 auto;
+    min-width: 250px;
+}
+
+
