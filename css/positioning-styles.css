@@ -37,7 +37,7 @@ body {
             top: 19.5dvh;
             left: 1dvw;
             fill: rgba(78, 84, 84, 0.79);
-
+            max-height: 14dvh;
         }
 
         .bg-wavy-2 {
@@ -133,3 +133,24 @@ button.btn.btn-login {
 }
 
 
+.login{
+    position: relative;
+}
+
+.bg-X-ico{
+    width: 50px;
+    position: absolute;
+    background-color: white;
+    border: 2px solid lightgray;
+
+    border-radius: 50%;
+    top: -13px;
+    right: -13px;
+
+    & img{
+        padding: .6em;
+        position: unset;
+        margin: auto;
+
+    }
+}
