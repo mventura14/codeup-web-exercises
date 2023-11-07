@@ -2,6 +2,14 @@
     background-image:url("../img/pizza.png");
     background-size: cover;
     height: 346px;
+}
+
+.step-c{
+    display: inline-block;
+    background-color: #6e6e6e;
+    border-radius: 50%;
+    width: 22px;
+    color: white;
 
 
 }
