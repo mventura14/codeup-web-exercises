@@ -10,7 +10,7 @@
 
 
 
-    setTimeout(()=>{
+/*    setTimeout(()=>{
         profilePic.setAttribute('src',"img/son_goku__headshot___bg__by_peculiardoc_dbtqtnu-pre.jpg")
     },2000);
 
@@ -35,8 +35,35 @@
         }
     }, interval);
 
+    */
+
+    const attTest = (maxCount,Interval) => {
+        let interval = 2000;
+        let step = 0;
+
+        const intervalId = setInterval(()=>{
+
+            switch (step){
+                case 0:
+                    profilePic.setAttribute('src',"img/son_goku__headshot___bg__by_peculiardoc_dbtqtnu-pre.jpg");
+                    break;
+                case 1:
+                    profileName.innerText = "Goku";
+                    break;
+                case 2:
+                    profileDesc.classList.toggle("text-red-mont")
+                    break;
+                case maxCount:clearInterval(intervalId);
+            }
+
+            profileCard.classList.toggle("background-red")
+            step++;
+        },interval)
 
 
+    }
+
+    attTest(10,2000)
 
 
 
