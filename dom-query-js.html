@@ -24,40 +24,67 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+
+<button id="jsHeader">Java Script Header</button>
+<button id="checkerSelec">Checker list color change</button>
+<button id="listItemBlue">First list item blue</button>
+<button id="subHeader">Blue Sub Header</button>
+<button id="missAcc">Mission Accomplished</button>
+
 <script>
     "use strict";
     // TODO: Uncomment next line and get the main header element by id
     const mainHeader = document.getElementById('main-header');
 
     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-    mainHeader.innerHTML = 'JavaScript is Cool';
+    const headerMain = () => {
+        mainHeader.innerHTML = 'JavaScript is Cool';
+    }
 
     // TODO: Uncomment the next line and get the sub header element by id
     const subHeader = document.querySelector('#sub-header');
 
     // TODO: Set the text color of subHeader to blue
-    subHeader.style.color = 'blue';
+    const subHeaderBlue = () => {
+        subHeader.style.color = 'blue';
+    }
 
     // TODO: Uncomment the next line and get all list items
     const listItems = document.querySelectorAll('li');
 
     // TODO: Set text color on every other list item to grey
-
-    for (let i = 0; i < listItems.length; i += 2) {
-        listItems[i].style.color = 'grey';
+    const checkerListColor = () => {
+        for (let i = 0; i < listItems.length; i += 2) {
+            listItems[i].style.color = 'grey';
+        }
     }
 
-    // TODO: Set text color of li with dbid = 1 to blue
-    document.querySelector('[data-dbid = "1"]').style.color = 'blue';
 
-/*
-    console.log(document.querySelector('[data-dbid = "1"]'))
-*/
+    // TODO: Set text color of li with dbid = 1 to blue
+    const fistLiColorChange = ()=>{document.querySelector('[data-dbid = "1"]').style.color = 'blue';}
+
+
+
+    /*
+        console.log(document.querySelector('[data-dbid = "1"]'))
+    */
     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
     const subParagraphs = document.querySelectorAll('.sub-paragraph');
 
     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraphs[0].innerText = 'Mission Accomplished';
+
+    const missinAccomp = ()=>{ subParagraphs[0].innerText = 'Mission Accomplished';}
+
+
+
+    document.querySelector('#jsHeader').addEventListener('click', headerMain);
+    document.querySelector('#subHeader').addEventListener('click', subHeaderBlue);
+
+    document.querySelector('#checkerSelec').addEventListener('click', checkerListColor);
+    document.querySelector('#listItemBlue').addEventListener('click', fistLiColorChange);
+    document.querySelector('#missAcc').addEventListener('click', missinAccomp);
+
 
 </script>
 </body>
