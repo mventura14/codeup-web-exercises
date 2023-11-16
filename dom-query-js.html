@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
 </head>
+<style>
+    body{background-color: #0a8a8a}
+
+</style>
+
+
 <body>
 
 <h1 id="main-header">Hello World!</h1>
@@ -80,10 +86,61 @@
 
     document.querySelector('#jsHeader').addEventListener('click', headerMain);
     document.querySelector('#subHeader').addEventListener('click', subHeaderBlue);
-
     document.querySelector('#checkerSelec').addEventListener('click', checkerListColor);
     document.querySelector('#listItemBlue').addEventListener('click', fistLiColorChange);
     document.querySelector('#missAcc').addEventListener('click', missinAccomp);
+
+ /* document.querySelector("h1").addEventListener('click',(e)=>{
+      console.log(e);
+      e.target.style.backgroundColor = "blue";
+  })*/
+
+    const allH1Select = document.querySelectorAll("h1")
+    const allPSelect = document.querySelectorAll("p")
+    const allLiSelect = document.querySelectorAll("li")
+
+    const bgBlueClicked = (e)=>{
+        e.target.style.backgroundColor = "blue"
+    }
+
+    const fontSize18 = (e)=>{
+        e.target.style.fontSize = "18px";
+    }
+
+    const fontRed = (e)=>{
+        e.target.style.color = "red";
+    }
+    const fontBlack = (e)=>{
+        e.target.style.color = "black";
+    }
+
+   //  For Loops
+
+ /*   for (let i = 0; i < allH1Select.length; i++) {
+        allH1Select[i].addEventListener("click", bgBlueClicked );
+    }
+   for (let i = 0; i < allPSelect.length; i++) {
+        allPSelect[i].addEventListener("dblclick", fontSize18);
+    }
+   for (let i = 0; i < allLiSelect.length; i++) {
+        allLiSelect[i].addEventListener("mouseenter", fontRed );
+        allLiSelect[i].addEventListener("mouseleave", fontBlack );
+    }
+   */
+   // for of loop
+
+    for (let h1 of document.querySelectorAll("h1")){
+        h1.addEventListener("click", bgBlueClicked )
+    }
+
+    for (let p of document.querySelectorAll("p")){
+        p.addEventListener("dblclick", fontSize18);
+    }
+    for (let li of document.querySelectorAll("li")){
+        li.addEventListener("mouseenter", fontRed );
+        li.addEventListener("mouseleave", fontBlack );
+    }
+
 
 
 </script>
