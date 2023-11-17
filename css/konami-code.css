@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #095454;
+}
+
+
+section {
+
+    display: flex;
+    flex-flow: column;
+
+    & h1 {
+        text-align: center;
+        padding: .5em;
+       font-size: 3rem;
+    }
+
+    .heart-display {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+        align-content: start;
+        max-width: 637px;
+        margin:auto;
+
+        .heart-con{
+            --_size: 90px;
+            width: var(--_size);
+            max-width: 16%;
+            margin: .5em;
+            .hide{
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.game-over{
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover{
+        color: azure;
+    }
+}
+
