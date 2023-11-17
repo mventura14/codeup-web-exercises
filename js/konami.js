@@ -38,10 +38,14 @@
             /*Max Count reached apply event listeners*/
             if (document.querySelectorAll(".heart").length === 30) {
                 console.log("its 30")
+
+
                 for (let heart of document.querySelectorAll(".heart")){
                     heart.addEventListener("mouseenter",(e)=>{
                         e.target.classList.add("hide");
                             console.log(document.querySelectorAll(".hide"))
+
+
                         if(document.querySelectorAll(".hide").length === 30){
                             console.log("gameover")
                             document.querySelector(".heart-display").innerHTML = "<h1 class='game-over'>Game Over</h1>";
