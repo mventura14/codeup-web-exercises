@@ -1,0 +1,21 @@
+
+body{
+    background-color: #095454;
+    color: #001b44;
+}
+
+li{
+    margin-bottom: 1em;
+}
+
+button{
+    margin: 1em auto;
+    display: block;
+    border: none;
+    border-radius: 50px;
+    padding: 1em;
+    font-size: 1rem;
+    background-color: #053b3b;
+    &:hover{background-color: #0b6e6e
+    }
+}
