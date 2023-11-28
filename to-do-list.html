@@ -21,7 +21,7 @@
                 <h3><label class="form-label" for="to-do">Enter to-do:</label></h3>
                 <input class="form-control" type="text" name="to-do" id="to-do">
                 <div class="d-grid">
-                    <button class="add">Add To-Do</button>
+                    <button id="add">Add To-Do</button>
                 </div>
             </form>
         </section>
@@ -39,7 +39,7 @@
 <script>
     "use strict"
 
-    document.querySelector(".add").addEventListener("click", (e) => {
+    document.querySelector("#add").addEventListener("click", (e) => {
         e.preventDefault();
         console.log(document.querySelector("#to-do").value.length)
         console.log(document.querySelector("#to-do").value)
