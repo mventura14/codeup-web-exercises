@@ -1,5 +1,5 @@
 "use strict";
-(callbackfn => {
+(() => {
     const users = [
         {
             id: 1,
