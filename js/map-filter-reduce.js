@@ -50,10 +50,13 @@
     console.log(userEmails)
     users.map(n => n.yearsOfExperience)
     /*Problem 3*/
-    const expAverage = users.reduce((total, user) => {
-        return (total + user.yearsOfExperience) / users.length
+    const expYears = users.reduce((total, user) => {
+        return total + user.yearsOfExperience
     }, 0)
-    console.log(expAverage);
+
+    const averageExpYears = expYears / users.length
+    console.log(expYears);
+    console.log(averageExpYears);
 
     /*Problem 4*/
     const longestEmail = users.reduce((longestEmail, user) => {
@@ -66,7 +69,7 @@
 
     /*Problem 5*/
     const usersAsString = users.reduce((userString, user)=>{
-        return userString  + user.name + ", "
-    }, "")
+        return (userString  + ` ${user.name},`)
+    }, "Your instructors are:")
     console.log(usersAsString);
 })()
