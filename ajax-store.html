@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script>
+    "use strict";
+    (()=>{
+
+    fetch("data/inventory.json").then(response=>response.json()).then(data=>{
+        console.log(data)
+
+
+        for(let item of data){
+            let newRow = document.createElement("tr")
+            let newField = (str)=>{
+                let th = document.createElement("td")
+                th.innerHTML = str
+                newRow.append(th)
+            }
+
+            newField(item.title)
+            newField(item.quantity)
+            newField(item.price)
+            fieldItems(item.categories);
+
+            document.querySelector("#insertProducts").append(newRow)
+
+
+            function fieldItems(arr){
+                let td = document.createElement("td")
+                let p = document.createElement("p")
+                for(let field of arr){
+                    p.innerHTML += `<p>${field}</p>`
+                    td.append(p)
+                }
+                newRow.append(td)
+            }
+        }
+
+
+
+
+    })
+
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    })()
+</script>
+
+</body>
+</html>
