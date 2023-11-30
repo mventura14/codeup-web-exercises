@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #095454;
+}
+
+
+
+.basic-layout {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #0b6e6e;
+
+    & h1 {
+        font-size: 3em;
+        height: max-content;
+        width: 100%;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+
+    & table{
+        border-collapse: collapse;
+    }
+    & table, & th, & td {
+        border: solid 1px;
+        width: max-content;
+        padding: 1em;
+        margin: auto;
+    }
+
+    & thead{
+        background-color: #095454;
+    }
+   #insertProducts{
+       & tr{
+           & td:nth-child(2), & td:nth-child(3){
+               text-align: center;
+           }
+       }
+   }
+}

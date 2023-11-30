@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #095454;
+}
+
+#posts {
+    width: 50%;
+    margin: 3em auto;
+    display: flex;
+    flex-flow: column;
+
+    & div {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+        background-color: rgb(9, 107, 107);
+        margin: 1em;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: #0fb784 5px 5px 10px 0;
+
+        & h1{
+            margin-bottom: .5em;
+            flex-grow: 1;
+        }
+
+        & p{
+        }
+    }
+
+
+}

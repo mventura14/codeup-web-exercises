@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="css/ajax-block.css">
+</head>
+<body>
+<main>
+    <div id="posts">
+    </div>
+</main>
+
+
+
+<script>
+    (() => {
+
+        fetch('data/blog.json').then(res=>res.json()).then(data=>{
+            console.log(data);
+            for (let article of data){
+                let div = document.createElement("div")
+                let h1 = document.createElement("h1")
+                let h4 = document.createElement("h4")
+                let p = document.createElement("p")
+
+                h1.innerText = article.title;
+                h4.innerText = article.date;
+                p.innerText = article.content;
+
+                div.append(h1)
+                div.append(h4)
+                div.append(p)
+
+                document.querySelector("#posts").append(div)
+            }
+        })
+    })()
+</script>
+</body>
+</html>
