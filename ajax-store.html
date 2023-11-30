@@ -5,24 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ajax Store</title>
+    <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
-
-<h1>My Tool Store</h1>
-
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
-
+<main>
+    <div class="basic-layout">
+        <h1>My Tool Store</h1>
+        <table id="products">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Categories</th>
+            </tr>
+            </thead>
+            <tbody id="insertProducts"></tbody>
+        </table>
+    </div>
+</main>
 <script>
     "use strict";
     (()=>{
