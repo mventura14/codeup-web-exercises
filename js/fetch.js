@@ -2,7 +2,7 @@ document.querySelector("#gitUserSubmit").addEventListener("click",(e)=>{
     e.preventDefault()
     let gitUser = document.querySelector("#gitUser").value
 
-    fetch(`https://api.github.com/users/${gitUser}/events/public`, {headers: {'Authorization': GH_KEY}}).then(response => response.json()).then(data =>{
+    fetch(`https://api.github.com/users/${gitUser}/events/public`, {headers: {'Authorization': `token ${GH_KEY}`}}).then(response => response.json()).then(data =>{
             let lastPushEvent = data.filter((n)=> n.type === "PushEvent")[0].created_at;
             console.log(data);
             const div = document.createElement("div");
