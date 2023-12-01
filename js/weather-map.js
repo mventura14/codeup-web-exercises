@@ -18,14 +18,15 @@
     const lon = -95.3698;
 
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${OWM_KEY}`).then(res => res.json())
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${OWM_KEY}&units=imperial`).then(res => res.json())
         .then(data => {
             console.log(data);
             const cityName = data.city.coord.name;
             const forecastList = data.list;
             const weekForecast = forecastByDay(forecastList)
             console.log(weekForecast);
-            createForecastCard(weekForecast[0])
+            // createForecastCard(weekForecast[0])
+            renderForecast(weekForecast)
         })
 
 
@@ -37,23 +38,56 @@
         return dayForecast
     }
 
-    function displayDayForecast() {
-
-    }
-
     function createForecastCard(forecast) {
-        const date =new Date(forecast.dt * 1000).getDay()
+        const date = new Date(forecast.dt * 1000)
+        const dateObjStr = dateObj(date);
+        const ico = forecast.weather[0].icon;
+        const description = firstLetterUpperCase(forecast.weather[0].description)
+        const maxTemp = forecast.main.temp_max;
+        const minTemp = forecast.main.temp_min;
+        const temp = forecast.main.temp;
+        const humidity = forecast.main.humidity
+        const windSpeed = forecast.wind.speed
+
+        console.log(dateObjStr);
+
         const cardContainer = document.createElement("div")
-        const daysOfWeek = ["Sunday","Monday","Tuesday","Wendsday","Thurstday", "Friday", "Saturday"]
+        cardContainer.classList.add("forecastCard")
+
         console.log(date)
         cardContainer.innerHTML = `
-        <h1>Monday</h1>
-        <h2>september 20 2023</h2>
-        <h3>Description</h3>
-        <p>humitidy:</p>
-        <p>wind:</p>
-        <p>pressure:</p>
+        <h1>${dateObjStr.dayOfWeek}</h1>
+        <h2>${dateObjStr.month} ${dateObjStr.dayOfMonth} ${dateObjStr.fullYear}</h2>
+        <h2>${maxTemp}/${minTemp}</h2>
+        <h3>${description}</h3>
+        <img src="http://openweathermap.org/img/w/${ico}.png" alt="" srcset="">
+        <p>Humidity:${humidity}</p>
+        <p>Wind:${windSpeed}</p>
         `
-        document.querySelector("body").append(cardContainer)
+        document.querySelector("#forecastRender").append(cardContainer)
     }
+    function renderForecast(arr){
+        arr.forEach((day)=>{
+            createForecastCard(day)
+        })
+    }
+    function dateObj(date){
+        const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday", "Saturday"]
+        const months = ["January", "February","March","April","May","June","July","August","September","October","November","December"]
+        const monthsV2 = ["Jan", "Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
+
+        return{
+            dayOfWeek: days[date.getDay()],
+            month: monthsV2[date.getMonth()],
+            dayOfMonth: date.getDate(),
+            fullYear: date.getFullYear(),
+        }
+    }
+    function firstLetterUpperCase(str) {
+        return str.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    }
+
+
 })()

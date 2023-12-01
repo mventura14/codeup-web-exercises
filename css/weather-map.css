@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+#forecastRender{
+    display: flex;
+
+
+
+}
+
+.forecastCard{
+    background-color: #095454;
+    width: max-content;
+    margin: 1em;
+    padding: 1rem;
+    border-radius: 1rem;
+    flex-grow: 1;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+
+    & h1{
+
+        text-align: center;
+    }
+
+    & h3{
+
+    }
+
+}
