@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map Box API</title>
+
+    <!--mapbox api-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/mapbox-maps-api.css">
+
+
+</head>
+<body>
+<main>
+    <div class="map-display">
+        <div class="map-control">
+
+            <label>Search Location</label>
+            <input type="text">
+            <div id="current-location">
+
+            </div>
+
+        </div>
+        <div id='map'></div>
+    </div>
+
+
+</main>
+
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/mapbox_maps_api.js"></script>
+
+</body>
+</html>
