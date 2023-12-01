@@ -58,10 +58,10 @@
         cardContainer.innerHTML = `
         <h1>${dateObjStr.dayOfWeek}</h1>
         <h2>${dateObjStr.month} ${dateObjStr.dayOfMonth} ${dateObjStr.fullYear}</h2>
-        <h2>${maxTemp}/${minTemp}</h2>
+        <h2>${maxTemp}<sup>o</sup>/${minTemp}<sup>o</sup></h2>
         <h3>${description}</h3>
         <img src="http://openweathermap.org/img/w/${ico}.png" alt="" srcset="">
-        <p>Humidity:${humidity}</p>
+        <p>Humidity: ${humidity}%</p>
         <p>Wind:${windSpeed}</p>
         `
         document.querySelector("#forecastRender").append(cardContainer)
