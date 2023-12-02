@@ -5,6 +5,58 @@
     font-family: serif;
 }
 
+.wrapper{
+    margin: 0 auto;
+    max-width: 70dvw;
+}
+
+body{
+    background-color: #0d6c8a;
+}
+
+nav{
+    --_font-color: #71aef8;
+background-color: #042e49;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    .logo{
+
+
+        & i{
+            font-size: 3rem;
+            color: var(--_font-color);
+        }
+        & a{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            color: var(--_font-color);
+            font-size: 1.5rem;
+            text-decoration: none;
+
+        }
+    }
+}
+
+
+.weather-app-disp{
+    display: flex;
+    flex-flow: row nowrap;
+    .search{}
+}
+
+
+
+
+
+
+
+
+
+
 #forecastRender{
     display: flex;
 
@@ -33,5 +85,27 @@
     & h3{
 
     }
+
+}
+
+
+.map-display{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #0fb784;
+    resize: both;
+}
+
+.map-control{
+    display: flex;
+    flex-flow: column;
+}
+
+#map{
+    resize: both;
+    background-color: #0b6e6e;
+    height: 50dvh;
+    width: 100%;
 
 }

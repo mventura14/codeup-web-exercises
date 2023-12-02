@@ -30,7 +30,7 @@
     map.addControl(new mapboxgl.NavigationControl());
     geocode("1525 parker rd, houston,tx 77093")
 
-    const marker = new mapboxgl.Marker()
+    let marker = new mapboxgl.Marker()
         .setLngLat([-98.4916, 29.4260])
         .addTo(map);
 

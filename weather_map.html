@@ -7,17 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map</title>
 
+    <!--Mapbox api-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
+
     <!--css-->
     <link rel="stylesheet" href="css/weather-map.css">
 
+    <!--boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
 </head>
 <body>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="#"><i class='bx bxl-soundcloud'></i> ACU-WEATHER</a>
+        </div>
+    </nav>
+</header>
+<main class="wrapper">
 
-<div>
-    <div class="search"></div>
-    <div></div>
+
+<div class="weather-app-disp">
+
+    <div class="search">
+        <h2 id="current-location">Current-Location</h2>
+        <label for="search-address">Address</label><input type="text" name="search-address" id="search-address">
+        <button id="search-btn" type="button">Submit</button>
+    </div>
+
+    <div class="map-display">
+        <div id='map'></div>
+    </div>
 
 </div>
+
+
+
 
 
 <div id="forecastRender">
@@ -26,9 +54,10 @@
 
 
 
-
+</main>
 <!--Scripts-->
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather-map.js"></script>
 </body>
 </html>
