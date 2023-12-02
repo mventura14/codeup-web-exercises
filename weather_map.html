@@ -28,29 +28,24 @@
     </nav>
 </header>
 <main class="wrapper">
-
-
-<div class="weather-app-disp">
-
-    <div class="search">
+    <div class="weather-app-disp">
         <h2 id="current-location">Current-Location</h2>
-        <label for="search-address">Address</label><input type="text" name="search-address" id="search-address">
-        <button id="search-btn" type="button">Submit</button>
+        <div id="forecastRender"></div>
+        <div class="search">
+            <form id="search-form">
+                <label for="search-address">Address</label>
+                <input type="text" name="search-address" id="search-address" placeholder="Address, City or Zip">
+                <button id="search-btn" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="map-display">
+            <div id='map'></div>
+        </div>
+
     </div>
 
-    <div class="map-display">
-        <div id='map'></div>
-    </div>
 
-</div>
-
-
-
-
-
-<div id="forecastRender">
-
-</div>
 
 
 

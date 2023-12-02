@@ -1,39 +1,47 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: serif;
 }
 
-.wrapper{
+:root {
+    --font-color: #71aef8;
+
+
+}
+
+
+.wrapper {
     margin: 0 auto;
     max-width: 70dvw;
 }
 
-body{
+body {
     background-color: #0d6c8a;
 }
 
-nav{
-    --_font-color: #71aef8;
-background-color: #042e49;
+nav {
+    background-color: #042e49;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    .logo{
+
+    .logo {
 
 
-        & i{
+        & i {
             font-size: 3rem;
-            color: var(--_font-color);
+            color: var(--font-color);
         }
-        & a{
+
+        & a {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
 
-            color: var(--_font-color);
+            color: var(--font-color);
             font-size: 1.5rem;
             text-decoration: none;
 
@@ -42,31 +50,63 @@ background-color: #042e49;
 }
 
 
-.weather-app-disp{
+.weather-app-disp {
     display: flex;
-    flex-flow: row nowrap;
-    .search{}
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .search-form {
+        display: flex;
+        flex-flow: column;
+        background-color: #AA04F9;
+    }
+
+    .search {
+        padding: 1em;
+        background-color: #053b3b;
+        width: 30%;
+
+        & form {
+            display: flex;
+            flex-flow: column;
+
+        }
+
+        & label, & input {
+            color: var(--font-color);
+            text-align: center;
+            align-items: center;
+            margin: 0 auto .5rem;
+            font-size: 1.4rem;
+            width: 100%;
+        }
+
+
+    }
+
+    .map-display {
+        background-color: #AA04F9;
+        width: 70%
+    }
+}
+
+#current-location {
+    width: 100%;
+    text-align: center;
 }
 
 
-
-
-
-
-
-
-
-
-#forecastRender{
+#forecastRender {
+    height:250px;
+    width: 100%;
     display: flex;
-
-
-
+    justify-content: center;
+    background-color: #AA04F9;
 }
 
-.forecastCard{
-    background-color: #095454;
-    width: max-content;
+.forecastCard {
+    color:var(--font-color);
+    width: 20%;
     margin: 1em;
     padding: 1rem;
     border-radius: 1rem;
@@ -77,19 +117,19 @@ background-color: #042e49;
     align-items: center;
 
 
-    & h1{
+    & h1 {
 
         text-align: center;
     }
 
-    & h3{
+    & h3 {
 
     }
 
 }
 
 
-.map-display{
+.map-display {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -97,12 +137,12 @@ background-color: #042e49;
     resize: both;
 }
 
-.map-control{
+.map-control {
     display: flex;
     flex-flow: column;
 }
 
-#map{
+#map {
     resize: both;
     background-color: #0b6e6e;
     height: 50dvh;

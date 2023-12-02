@@ -28,6 +28,10 @@
 
     map.addControl(new mapboxgl.NavigationControl());
 
+    document.querySelector("#search-form").addEventListener("submit",(e)=>{
+        e.preventDefault()
+    })
+
     /*sets default map location*/
     geocode("1962 W Gray St, Houston, TX 77019", MB_KEY)
         .then(result => {
@@ -38,17 +42,14 @@
 
     map.on('click', (e) => {
         console.log(`A click event has occurred at ${e.lngLat}`);
-
         interactiveWeatherMarker(e)
-
-
         get5DayForecast()
         console.log(weatherMarker)
     });
 
     document.querySelector("#search-btn").addEventListener('click', ()=>{
-        let searchLocation = document.querySelector("#search-address").value.toLowerCase()
-        geocode(searchLocation, token).then(res=>{
+        let searchLocation = document.querySelector("#search-address")
+        geocode(searchLocation.value.toLowerCase(), token).then(res=>{
             console.log(res)
             let cord = {
                 lngLat:{
@@ -66,7 +67,7 @@
 
             get5DayForecast()
         })
-
+        searchLocation.value = "";
 
     })
 
