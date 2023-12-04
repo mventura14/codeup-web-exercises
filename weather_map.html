@@ -5,48 +5,78 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Map</title>
+    <title>ACCU-Weather</title>
 
-    <!--Mapbox api-->
+    <!-- Mapbox api -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
 
-    <!--css-->
+    <!-- css -->
     <link rel="stylesheet" href="css/weather-map.css">
 
-    <!--boxicons-->
+    <!-- https://animista.net -->
+    <link rel="stylesheet" href="css/animista.css">
+
+    <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
 </head>
 <body>
+<div class="bg-pan-left gradient-hor"></div>
 <header>
     <nav>
         <div class="logo">
-            <a href="#"><i class='bx bxl-soundcloud'></i> ACU-WEATHER</a>
+            <a href="#"><i class='bx bxl-soundcloud'></i>ACCU-WEATHER</a>
         </div>
+        <button class="about-btn ">About</button>
     </nav>
+    <div class="about slide-in-elliptic-top-fwd">
+        <h1>A simple Weather App</h1>
+        <div class="">
+            <h2>About</h2>
+            <p>This is simple weather app that provides a 5-day weather forecast based on a given location.</p>
+            <p>Mapbox API is used for the map, map interactions, and geolocation.</p>
+            <p>Open Weather Map API is used to retrieve weather information when given a location.</p>
+            <p>Uses JavaScript to make AJAX calls to the Open Weather Map API and Mapbox API.</p>
+            <p>Animista a CSS animation generator is used for the animations of the app.</p>
+            <p>Boxicons is used to aquaire icon for the nav logo.</p>
+            <p></p>
+
+        </div>
+        <div>
+            <h2>Reference Links</h2>
+            <a href="https://www.mapbox.com/">Mapbox API</a>
+            <a href="https://openweathermap.org/api">Open Weather Map API</a>
+            <a href="https://animista.net/play">Animista</a>
+            <a href="https://boxicons.com/">Boxicons</a>
+        </div>
+    </div>
 </header>
+
 <main class="wrapper">
     <div class="weather-app-disp">
-        <h2 id="current-location">Current-Location</h2>
-        <div id="forecastRender"></div>
-        <div class="search">
-            <form id="search-form">
-                <label for="search-address">Address</label>
-                <input type="text" name="search-address" id="search-address" placeholder="Address, City or Zip">
-                <button id="search-btn" type="submit">Submit</button>
-            </form>
+        <h2 id="current-location" class="slit-in-vertical">Navigate to see the weather forecast</h2>
+        <div class="map-search">
+            <div class="search">
+                <form id="search-form">
+                    <label for="search-address">Location Search</label>
+                    <input type="text" name="search-address" id="search-address" placeholder="Address, City or Zip">
+                    <button id="search-btn" type="submit">Submit</button>
+                </form>
+                <label for="zoom">Zoom Level</label>
+                <input type="range" min="1" max="20" step="0.1" value="3" id="zoom">
+            </div>
+
+            <div class="map-display">
+                <div id='map'></div>
+            </div>
+
         </div>
 
-        <div class="map-display">
-            <div id='map'></div>
-        </div>
+        <div id="forecastRender"></div>
 
     </div>
-
-
-
 
 
 </main>

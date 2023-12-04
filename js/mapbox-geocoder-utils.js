@@ -42,5 +42,5 @@ function reverseGeocode(coordinates, token) {
     return fetch(`${baseUrl}${endPoint}${coordinates.lng},${coordinates.lat}.json?access_token=${token}`)
         .then( res => res.json() )
         // to get all the data from the request, comment out the following three lines...
-        .then( data => data.features[0].place_name );
+        .then( data => data);
 }
