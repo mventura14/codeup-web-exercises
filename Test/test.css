@@ -1,0 +1,10 @@
+.star-rating{
+    display: flex;
+    color: gold;
+    .star{
+        font-size: 2rem;
+        &:hover{
+            color: #ffea00;
+        }
+    }
+}
